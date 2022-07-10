@@ -2,16 +2,15 @@ const precio = parseFloat(200);
 var resumen_button = document.getElementById('resumen');
 var totalAPagar = document.getElementById("totalAPagar");
 var res;
-totalAPagar.textContent = "Total a pagar: ";
 var cantidad;
 var selected_index;
-//var selected_option = categoria.options[categoria.selectedIndex];
-//console.log(selected_option);
+totalAPagar.textContent = "Total a pagar: "; // Quiero que este texto quede fijo
 resumen_button.onclick = function mostrarTotalAPagar()
 {
 	cantidad = document.getElementById('cantidad').value;
 	selected_index = document.getElementById('categoria').selectedIndex;
-	if(cantidad !== '' && cantidad % 1 == 0 && cantidad >= 0){ // Chequeo que el campo cantidad esté completo y que sea entero y
+	// Chequeo que el campo cantidad esté completo, que sea entero y positivo
+	if(cantidad !== '' && cantidad % 1 == 0 && cantidad >= 0){ 
 		if(selected_index === 0){
 			res = (0.2)*precio*cantidad;
 		}
@@ -25,8 +24,6 @@ resumen_button.onclick = function mostrarTotalAPagar()
 	}
 
 }
-
-// ver https://aulasvirtuales.bue.edu.ar/pluginfile.php/571680/mod_resource/content/2/Unidad%209.pdf parte eventos del dom
 
 function borrarDatos(){
 	cantidad = document.getElementById('cantidad').value;

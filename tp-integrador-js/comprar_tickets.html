@@ -1,3 +1,10 @@
+<!--Hola, dejo una consulta y una aclaración en este comentario: 
+    Consulta: pude hacer la parte de "Total a pagar" con div pero no con input. Al div le modifiqué .textContent desde Javascript.
+    Cómo sería la alternativa con input? Modificar .value?
+
+    Aclaración: en la página almacenada en github el script está en un archivo externo inicio.js linkeado al html. Acá está dentro
+    de las etiquetas <script> para poder pegar todo junto. -->
+        
 <!--Enlace a Github: https://fjoaquinf.github.io/tp-cac/tp-integrador-js/comprar_tickets.html-->
 <!DOCTYPE html>
 <html lang="es">
@@ -101,7 +108,7 @@
             </div>
 
             <div style="padding-top: 1.5em;">
-                <!--<input class="alert alert-primary" style="margin:auto; width: 100%;" value="Total a pagar:" role="alert" readonly></input>-->
+                <!--<input class="alert alert-primary" style="margin:auto; width: 100%;" value="Total a pagar:" role="alert" readonly id ="totalAPagar"></input>-->
                 <div readonly class="alert alert-primary" style="margin:auto; width: 100%;" id ="totalAPagar"></div>
             </div>
         </div>
@@ -145,6 +152,6 @@
             </div>
         </nav>
     </footer>
-    <script src=inicio.js> </script>
+    <script src=inicio.js></script>
 </body>
 </html>
